@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head}}
+  <body>
+    {{> header}}
+    <div class="container">
+      <div class="main">
+        <div class="h-entry entry">
+        {{#entry}}
+          {{#date}}
+            <a class="u-url small date left margin" href="{{{url}}}">
+                <time class="dt-published" datetime="{{#formatDate}} YYYY-MM-DDTHH:mm:ssZZ {{/formatDate}}">
+                    {{#formatDate}} ddd, MMM D, YYYY {{/formatDate}}
+                </time>
+            </a>
+          {{/date}}
+
+          <h1 id="{{{slug}}}" class="p-name">{{{title}}}</h1>
+
+          <div style="display: none">
+            <a rel="author" class="p-author h-card" href="https://www.datashaman.com/">Marlin Forbes</a>
+          </div>
+
+          <div class="e-content">
+            {{{body}}}
+          </div>
+
+          {{#tags.length}}
+          <br />
+          <p>
+            {{#tags}}
+            <a class="p-category small tag" href="/tagged/{{slug}}">{{name}}</a>
+            {{/tags}}
+          </p>
+          {{/tags.length}}
+
+          <div class="mentions">
+          </div>
+
+          <div class="clear"></div>
+          {{> pluginHTML}}
+          <div class="clear"></div>
+
+          {{#adjacent}}
+          <hr class="full" />
+          {{/adjacent}}
+
+          {{#previous}}
+          <a class="halfWidth left previousEntry" href="{{{url}}}">
+            <h5>Previous post</h5>
+            <span class="title">{{title}}</span>
+            <span class="summary">{{summary}}</span>
+          </a>
+          {{/previous}}
+
+          {{#next}}
+          <a class="left halfWidth nextEntry" href="{{{url}}}">
+            <h5>Next post</h5>
+            <span class="title">{{title}}</span>
+            <span class="summary">{{summary}}</span>
+          </a>
+          {{/next}}
+
+        {{/entry}}
+        </div>
+        {{> footer}}
+      </div>
+    </div>
+  </body>
+</html>

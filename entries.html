@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head}}
+  <body>
+    {{> header}}
+    <div class="container">
+      <div class="main">
+        {{#entries}}
+        <div class="h-entry entry">
+          {{#date}}
+            <a class="u-url small date left margin" href="{{{url}}}">
+                <time class="dt-published" datetime="{{#formatDate}} YYYY-MM-DDTHH:mm:ssZZ {{/formatDate}}">
+                    {{#formatDate}} ddd, MMM D, YYYY {{/formatDate}}
+                </time>
+            </a>
+          {{/date}}
+          <a class="p-name u-url" href="{{{url}}}">
+            {{{titleTag}}}
+          </a>
+          <div class="p-summary">{{{teaserBody}}}</div>
+          {{#tags}}
+          <a class="small tag" href="/tagged/{{slug}}">{{name}}</a>
+          {{/tags}}
+          <div style="display: none">
+            <a rel="author" class="p-author h-card" href="https://www.datashaman.com/">Marlin Forbes</a>
+          </div>
+          <div class="clear"></div>
+        </div>
+        {{/entries}}
+        {{#pagination}}
+        <div class="pagination">
+          {{#previous}}
+            <a href="/page/{{previous}}">&larr; Newer</a>
+          {{/previous}}
+          Page {{current}} of {{total}}
+          {{#next}}
+            <a href="/page/{{next}}">Older &rarr;</a>
+          {{/next}}
+        </div>
+        {{/pagination}}
+        {{> footer}}
+      </div>
+    </div>
+  </body>
+</html>

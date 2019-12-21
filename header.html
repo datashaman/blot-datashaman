@@ -1,0 +1,32 @@
+<div class="container header">
+    <div class="h-card main">
+        <span id="logo">
+            <a class="u-url" href="https://www.datashaman.com/">
+                {{#avatar}}
+                <img class="u-photo avatar {{#avatarRounded}}rounded{{/avatarRounded}}" src="{{{avatar}}}" alt="{{title}}" width="64" height="64"/>
+                {{/avatar}}
+
+                <span class="p-nickname">{{title}}</span>
+            </a>
+        </span>
+
+        <ul class="contacts">
+            <li><a rel="me" href="https://twitter.com/data_shaman" aria-label="twitter" title="twitter"><i data-feather="twitter"></i></a></li>
+            <li><a rel="me" href="https://github.com/datashaman" aria-label="github" title="github"><i data-feather="github"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/datashaman" aria-label="linkedin" title="linkedin"><i data-feather="linkedin"></i></a></li>
+            <li><a href="https://codepen.io/datashaman" aria-label="codepen" title="codepen"><i data-feather="codepen"></i></a></li>
+            <li><a rel="pgpkey" class="u-key" type="text/plain" href="/_/datashaman.txt" aria-label="public key" title="marlinf@datashaman.com"><i data-feather="key"></i></a></li>
+        </ul>
+
+        <div>
+            Hi, I'm <span class="p-name">Marlin Forbes</span>. <span class="p-note">Freelance developer, open-source solutions.<br>
+            <em>Wannabe</em> writer.</span>
+        </div>
+
+        <div class="nav">
+            {{#menu}}
+            <a href="{{{url}}}" title="{{label}}">{{label}}</a>
+            {{/menu}}
+        </div>
+    </div>
+</div>

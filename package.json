@@ -1,0 +1,77 @@
+{
+  "name": "datashaman",
+  "locals": {
+    "page_size": "6"
+  },
+  "views": {
+    "error.html": {
+      "partials": {
+        "title": "{{{error.title}}} - {{{title}}}",
+        "description": "Error on {{{title}}}",
+        "head": null,
+        "header": null,
+        "footer": null
+      }
+    },
+    "archives.html": {
+      "url": "/archives",
+      "partials": {
+        "title": "Archives - {{{title}}}",
+        "description": "All the entries posted on {{{title}}}",
+        "head": null,
+        "header": null,
+        "footer": null
+      }
+    },
+    "entry.html": {
+      "partials": {
+        "title": "{{{entry.title}}} - {{{title}}}",
+        "description": "{{{entry.summary}}}",
+        "head": null,
+        "header": null,
+        "pluginHTML": null,
+        "footer": null
+      }
+    },
+    "search.html": {
+      "partials": {
+        "title": "Search - {{{title}}}",
+        "description": "Search all the entries posted on {{{title}}}",
+        "head": null,
+        "header": null,
+        "footer": null
+      }
+    },
+    "head.html": {
+      "partials": {
+        "title": null,
+        "description": null
+      }
+    },
+    "entries.html": {
+      "partials": {
+        "title": "{{{title}}}",
+        "description": "Freelance developer, open-source solutions. Wannabe writer.",
+        "head": null,
+        "header": null,
+        "footer": null
+      }
+    },
+    "tagged.html": {
+      "partials": {
+        "title": "Entries tagged {{{tag}}} from {{{title}}}",
+        "description": "All of the entries posted on {{{title}}} tagged {{{tag}}}",
+        "head": null,
+        "header": null,
+        "footer": null
+      }
+    },
+    "public.html": {
+      "partials": {
+        "title": "Index of {{{path}}}",
+        "description": "All the files and folders inside {{{path}}}",
+        "head": null
+      }
+    }
+  }
+}

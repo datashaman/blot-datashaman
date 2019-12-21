@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head}}
+  <body>
+    {{> header}}
+    <div class="container">
+      <div class="main">
+        <h1>Archives</h1>
+        <div>
+          {{#allEntries}}
+            <div class="h-entry">
+                <a class="u-url p-name" href="{{{url}}}">{{title}}</a>
+                {{#date}}
+                <span class="small">
+                    <time class="dt-published" datetime="{{#formatDate}} YYYY-MM-DDTHH:mm:ssZZ {{/formatDate}}">
+                        {{#formatDate}} ddd, MMM D, YYYY {{/formatDate}}
+                    </time>
+                </span>
+                {{/date}}
+                <div style="display: none">
+                    <a rel="author" class="p-author h-card" href="https://www.datashaman.com/">Marlin Forbes</a>
+                </div>
+                <br />
+            </div>
+          {{/allEntries}}
+        </div>
+        {{> footer}}
+      </div>
+    </div>
+  </body>
+</html>
