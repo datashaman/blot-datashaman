@@ -1,6 +1,0 @@
-.deployignore
-.editorconfig
-.env
-.git
-Makefile
-README.md
